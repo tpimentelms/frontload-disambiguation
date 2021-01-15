@@ -47,8 +47,7 @@ You can train your models using random search with the command
 ```bash
 $ make LANGUAGE=<language> DATASET=<dataset>
 ```
-There are three datasets available in this repository: celex; northeuralex; and wikipedia.
-To get the wikipedia tokenized data use the code in the [Wikipedia Tokenizer repository](https://github.com/tpimentelms/wiki-tokenizer).
+There are three datasets available in this repository: celex; northeuralex; and wiki.
 
 
 To train the model in all languages from one of the datasets, run
