@@ -1,5 +1,8 @@
 # frontload-disambiguation
 
+[![CircleCI](https://circleci.com/gh/tpimentelms/frontload-disambiguation.svg?style=svg&circle-token=0849cab470f63aacaf87c631c0190887f7645284)](https://circleci.com/gh/tpimentelms/frontload-disambiguation)
+
+
 This code accompanies the paper "Disambiguatory signals are stronger in word initial positions" published in EACL 2021.
 
 
