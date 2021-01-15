@@ -16,6 +16,31 @@ $ conda install -y pytorch torchvision cudatoolkit=10.1 -c pytorch
 $ # conda install pytorch torchvision cpuonly -c pytorch
 ```
 
+## Get Data
+
+#### CELEX
+
+CELEX data can be obtained at https://catalog.ldc.upenn.edu/LDC96L14/.
+You can process it with the command:
+```bash
+$ make LANGUAGE=<language> DATASET=celex
+```
+Languages: eng, deu, nld.
+
+#### NorthEuraLex
+
+NorthEuraLex data already comes with this repo. To preprocess it, run:
+```bash
+$ make LANGUAGE=<language> DATASET=northeuralex
+```
+with any language in NorthEuraLex, e.g. `por`.
+
+#### Wikipedia
+
+To get the wikipedia tokenized data use the code in the [Wikipedia Tokenizer repository](https://github.com/tpimentelms/wiki-tokenizer).
+
+
+
 ## Train and evaluate the models
 
 You can train your models using random search with the command
@@ -25,6 +50,11 @@ $ make LANGUAGE=<language> DATASET=<dataset>
 There are three datasets available in this repository: celex; northeuralex; and wikipedia.
 To get the wikipedia tokenized data use the code in the [Wikipedia Tokenizer repository](https://github.com/tpimentelms/wiki-tokenizer).
 
+
+To train the model in all languages from one of the datasets, run
+```bash
+$ python src/h02_learn/train_all.py --dataset <dataset> --data-path data/<dataset>/
+```
 
 ## Extra Information
 
