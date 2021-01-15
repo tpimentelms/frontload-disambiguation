@@ -56,6 +56,31 @@ To train the model in all languages from one of the datasets, run
 $ python src/h02_learn/train_all.py --dataset <dataset> --data-path data/<dataset>/
 ```
 
+The names of the models in this repository differ from the paper. They are: `norm` (Forward); `rev` (Backward); `cloze` (Cloze); `unigram` (Unigram); `position-nn` (Position-specific).
+
+
+## Print and Plot Paper Results
+
+To make the first page plot (forward and backward surprisal plots) use command:
+```bash
+$ make plot_first_page
+```
+
+To get and print the p-values used in the statistical significance tests
+```bash
+$ make p_value MODEL=<model> DATASET=<dataset>
+```
+
+The command to plot Figures 2 and 3 is:
+```bash
+$ make plot_bin
+```
+the plots will be created in folder `results/`. Finally, to print Tables 2 and 3 run:
+```bash
+$ make print_eow
+$ make print_diffs
+```
+
 ## Extra Information
 
 #### Citation
