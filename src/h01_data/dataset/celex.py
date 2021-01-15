@@ -7,6 +7,9 @@ from .base import BaseDataProcesser
 
 
 class Celex(BaseDataProcesser):
+    languages = [
+        'eng', 'deu', 'nld'
+    ]
 
     def process_data(self):
         df = pd.read_csv(self.fname, delimiter='\t')
@@ -39,3 +42,7 @@ class Celex(BaseDataProcesser):
     @staticmethod
     def get_word(row):
         return row.phones, list(row.phones)
+
+    @classmethod
+    def get_languages(cls, *_):
+        return cls.languages
