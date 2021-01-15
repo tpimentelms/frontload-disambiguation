@@ -127,3 +127,16 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# VsCode
+.vscode/
+
+# Project specific
+data/celex/*
+!data/celex/README.md
+data/northeuralex/*
+!data/northeuralex/README.md
+!data/northeuralex/northeuralex-0.9-forms.tsv
+data/wiki/*
+!data/wiki/README.md
+checkpoint/
